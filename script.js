@@ -102,11 +102,11 @@ for (let item of array){
 // let returnAge = userStatus();
 // console.log(returnAge);
 
-let getUserAge$ = (birthYear) => {
-    let age = birthYear;
+let getUserAge$ = (birthYear,yearnow) => {
+    let age = yearnow - birthYear;
     let ageResult = age > 18 ? "სრულწლოვანი" : "არასრულწლოვანი";
     return ageResult;
 }
 
-let resultAge$ = getUserAge$(2012);
+let resultAge$ = getUserAge$(2002,2024);
 console.log(resultAge$);
