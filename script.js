@@ -36,12 +36,23 @@ console.log(returName);
 
 
 //დავალება#3
-function array(...x) {
-
-    return Math.max.apply(null, x);
+// A
+function getMax(...numbers) {
+    console.log(Math.max(...numbers));    
 }
-let max = array(5,50,6, 7, 8, 11, 6, 3, 9);
-console.log(max);
+getMax(8, 15, 25, 150, 4, 17)
+// B
+function getMaxValue(...elements) {
+    let maxValue = 0
+    for (let item of elements) {
+        if (item > maxValue) {
+            maxValue = item;
+        }
+    }
+    return maxValue;
+}
+let resultMaxValue = getMaxValue(8, 15, 25, 150, 4, 17)
+console.log(resultMaxValue);
 
 
 //დავალება#4
@@ -62,9 +73,17 @@ console.log(fnc0);
 
 //დავალება#5
 let array = [1,2,3,4,5]; 
-for (let item of array) {}
-console.log(array.reverse());
+// A
+for (let i = array.length - 1; i >= 0; i--){
+    console.log(array[i]);
+}
+// B
+array.reverse();
+console.log(array); //[ 5, 4, 3, 2, 1 ]
 
+for (let item of array){
+    console.log(item);
+}
 
 //დავალება#6
 // let user1 = {
